@@ -45,3 +45,13 @@
     font-family: "Lucida Grande", "Arial", sans-serif;
     width: 760px;
   }
+
+  .snap {
+    margin: 2em;   
+  }
+
+  .button-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

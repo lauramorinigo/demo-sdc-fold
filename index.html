@@ -5,25 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/samsunginternet/OneUI-Web/oui-css/oui.css">
     <script src="index.js"></script>
-    <title>Document</title>
+    <title>Folding the Web</title>
 </head>
 <body>
-    <div class="contentarea">
-        <h1>
-            Say cheese unfolding the web!
-        </h1>
-        
-      <div class="camera">
-        <video id="video" width="640" height="480">Video stream not available.</video>
-        <button id="snap">Take photo</button> 
+    <main class="container oui-bubble">
+      <div>
+          <h1>
+              Say cheese unfolding the web!
+          </h1>
+          
+        <div class="camera">
+          <video id="video" width="640" height="480" class="oui-image-cover">Video stream not available.</video>
+          <div class="button-wrap">
+            <button id="snap" class="oui-button snap">Smile</button> 
+          </div>  
+        </div>
       </div>
-      <canvas id="canvas" width="640" height="480">
-      </canvas>
-      <div class="output">
-        <img id="photo" alt="Captured photo."> 
-      </div>
-        
-    </div>
+      <div class="oui-interaction">
+        <canvas id="canvas" width="640" height="480">
+        </canvas>
+        <div class="output">
+          <img id="photo" alt="Captured photo." class="oui-image-cover"> 
+        </div>
+      </div>    
+      
+    </main>
 </body>
 </html>
