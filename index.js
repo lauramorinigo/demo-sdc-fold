@@ -4,10 +4,10 @@
 
     let streaming = false;
     let photo = null;
-
+    let canvas = null;
     function startup(){
         let video  = document.getElementById('video');
-        let canvas = document.getElementById('canvas');
+        canvas = document.getElementById('canvas');
         let snip_button = document.getElementById('snap');
         photo  = document.getElementById('photo');
 
@@ -25,10 +25,10 @@
                 height = video.videoHeight / (video.videoWidth/width);
                 
                 //esto puedo obviarlo y poner una medida fija
-                video.setAttribute('width', width);
-                video.setAttribute('height', height);
-                canvas.setAttribute('width', width);
-                canvas.setAttribute('height', height);
+                video.setAttribute('width', 1280);
+                video.setAttribute('height', 400);
+                canvas.setAttribute('width', 50);
+                canvas.setAttribute('height', 50);
                 streaming = true;
             }
         }, false);
