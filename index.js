@@ -26,7 +26,7 @@
                 
                 //esto puedo obviarlo y poner una medida fija
                 video.setAttribute('width', 1280);
-                video.setAttribute('height', 400);
+                video.setAttribute('height', 320);
                 canvas.setAttribute('width', 50);
                 canvas.setAttribute('height', 50);
                 streaming = true;
