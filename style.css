@@ -1,6 +1,4 @@
-#canvas {
-  display: none;
-}
+
 
 html {
   height: 100%;
@@ -9,22 +7,95 @@ html {
 
 body {
   color: white;
-  font-size: 1.5em;
   margin: 0;
-  background-color: black;
-  width: 100%;
-  max-width: 800px;
+  padding: 0;
+  background: black;
   margin: auto;
   display: grid;
-  grid-template: 1fr min-content/1fr;
+  grid-template: 1fr min-content/1fr; 
   height: 100%;
 }
 
+.video-container {
+  top:0;
+  left: 0;
+}
+
+#video {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.camera-controls{
+  position: fixed;
+  background-color: black;
+  z-index: 2;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+#canvas {
+  display: none;
+}
+
+#photo {
+  border-radius: 100%;
+  margin: 1em;
+  width: 80px;
+  height: 80px;
+}
+
+button {
+  outline: none;
+  position: absolute;
+  color: white;
+  display: block;
+  opacity: 1;
+  background: transparent;
+  border: solid 2px #fff;
+  padding: 0;
+  text-shadow: 0px 0px 4px black;
+  background-position: center center;
+  background-repeat: no-repeat;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+#snap {
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  background-image: url('img/ic_photo_camera_white_48px.svg');
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#snap:active {
+  background-color: #fff;
+}
+
+#fullscreen-button{
+  display: none;
+  width: 64px;
+  height: 64px;
+  background-image: url('assets/ic_fullscreen_white_48px.svg');
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 
 @media (screen-fold-posture: laptop) {
-  body {
-    background-color: pink;
-    grid-template: env(fold-bottom) 1fr/1fr;
-  }
+  
+   body {
+     
+     display: flex;
+     flex-flow: column nowrap;
+   }
+   .video-container .camera-controls {
+     flex: 1 1 env(fold-bottom);
+   } 
 }
