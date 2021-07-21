@@ -65,18 +65,24 @@ button {
 .snap {
   width: 80px;
   height: 80px;
-  background-image: url('img/ic_photo_camera_white_48px.svg');
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
   align-self: center;
   justify-self: center;
 }
 
-.snap:active {
+#snap:active {
   background-color: #fff;
 }
 
+#expand {
+  background-image: url('assets/flip_camera.svg');
+  background-size: cover;
+}
 
+#expand[aria-pressed='true'] {
+ 
+}
 
 
 @media (screen-fold-posture: laptop) {
