@@ -33,6 +33,7 @@ body {
   width: 100%;
   height: auto;
   display: grid;
+  grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 1em;
 }
@@ -43,8 +44,8 @@ body {
 
 #photo {
   border-radius: 100%;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   align-self: center;
   justify-self: center;
 }
@@ -63,8 +64,8 @@ button {
 }
 
 .snap {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
   align-self: center;
@@ -75,24 +76,38 @@ button {
   background-color: #fff;
 }
 
-#expand {
-  background-image: url('assets/flip_camera.svg');
+#flip {
+  background-image: url('https://cdn.glitch.com/f5e9ac2c-d9fb-4f72-8970-ba1907ab0a95%2Fflip_camera.svg?v=1626905989989');
   background-size: cover;
 }
 
-#expand[aria-pressed='true'] {
+#flip[aria-pressed='true'] {
  
 }
+
+.msg {
+  grid-row: 1;
+  font-size: 18px;
+  
+  grid-column: 1 / 4;
+  justify-self: center;
+  display:none;
+}
+
 
 
 @media (screen-fold-posture: laptop) {
   
    body {
-     
      display: flex;
      flex-flow: column nowrap;
    }
    .video-container .camera-controls {
      flex: 1 1 env(fold-bottom);
    } 
+  .msg {
+    display:block;
+    margin: 5em;
+  }
+  
 }
